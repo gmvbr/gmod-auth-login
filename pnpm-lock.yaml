@@ -1,12 +1,15 @@
 dependencies:
   fastify-plugin: 3.0.0
+  fluent-schema: 1.0.5
 devDependencies:
   '@types/chai': 4.2.14
   '@types/mocha': 8.0.3
   '@types/node': 14.14.6
   chai: 4.2.0
   fastify: 3.7.0
+  fastify-sensible: 3.0.1
   gts: 3.0.2_typescript@4.0.5
+  light-my-request: 4.2.1
   mocha: 8.2.1
   nyc: 15.1.0
   ts-node: 9.0.0_typescript@4.0.5
@@ -910,7 +913,6 @@ packages:
     resolution:
       integrity: sha1-s2nW+128E+7PUk+RsHD+7cNXzzQ=
   /deepmerge/4.2.2:
-    dev: true
     engines:
       node: '>=0.10.0'
     resolution:
@@ -927,6 +929,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-0ISdNousHvZT2EiFlZeZAHBUvSxmKswVCEf8hW7KWgG4a8MVEu/3Vb6uWYozkjylyCxe0JBIiRB1jV45S70WVQ==
+  /depd/1.1.2:
+    dev: true
+    engines:
+      node: '>= 0.6'
+    resolution:
+      integrity: sha1-m81S4UwJd2PnSbJ0xDRu0uVgtak=
   /diff/4.0.2:
     dev: true
     engines:
@@ -1270,10 +1278,30 @@ packages:
     dev: true
     resolution:
       integrity: sha512-zabxsBatj59ROG0fhP36zNdc5Q1/eYeH9oSF9uvfrurZf8/JKfrJbMcIGrLpLWcf89rS6L91RHWm20A/X85hcA==
+  /fastify-plugin/2.3.4:
+    dependencies:
+      semver: 7.3.2
+    dev: true
+    resolution:
+      integrity: sha512-I+Oaj6p9oiRozbam30sh39BiuiqBda7yK2nmSPVwDCfIBlKnT8YB3MY+pRQc2Fcd07bf6KPGklHJaQ2Qu81TYQ==
   /fastify-plugin/3.0.0:
     dev: false
     resolution:
       integrity: sha512-ZdCvKEEd92DNLps5n0v231Bha8bkz1DjnPP/aEz37rz/q42Z5JVLmgnqR4DYuNn3NXAO3IDCPyRvgvxtJ4Ym4w==
+  /fastify-sensible/3.0.1:
+    dependencies:
+      '@types/node': 14.14.6
+      fast-deep-equal: 3.1.3
+      fastify-plugin: 2.3.4
+      forwarded: 0.1.2
+      http-errors: 1.8.0
+      type-is: 1.6.18
+      vary: 1.1.2
+    dev: true
+    engines:
+      node: '>=10.0.0'
+    resolution:
+      integrity: sha512-XVgrQySnpNq6FTUEhLLyA0i6eB7DKF6OJV05gxCDQ008cEgzOs97L/TOd1tT3fgRf3Z6tyA2zb/wMdFX5o1C2Q==
   /fastify-warning/0.2.0:
     dev: true
     resolution:
@@ -1400,6 +1428,14 @@ packages:
     dev: true
     resolution:
       integrity: sha512-r5wGx7YeOwNWNlCA0wQ86zKyDLMQr+/RB8xy74M4hTphfmjlijTSSXGuH8rnvKZnfT9i+75zmd8jcKdMR4O6jA==
+  /fluent-schema/1.0.5:
+    dependencies:
+      deepmerge: 4.2.2
+    dev: false
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-JzLiRtpIo8BZjc4wtIags3hyntIFCI/UqTXStCTs8L17ftYALPM6aqP1lrdTdsOk3SYWQOsdKFYVuetZOmSCTg==
   /foreground-child/2.0.0:
     dependencies:
       cross-spawn: 7.0.3
@@ -1650,6 +1686,18 @@ packages:
     dev: true
     resolution:
       integrity: sha512-carPklcUh7ROWRK7Cv27RPtdhYhUsela/ue5/jKzjegVvXDqM2ILE9Q2BGn9JZJh1g87cp56su/FgQSzcWS8cQ==
+  /http-errors/1.8.0:
+    dependencies:
+      depd: 1.1.2
+      inherits: 2.0.4
+      setprototypeof: 1.2.0
+      statuses: 1.5.0
+      toidentifier: 1.0.0
+    dev: true
+    engines:
+      node: '>= 0.6'
+    resolution:
+      integrity: sha512-4I8r0C5JDhT5VkvI47QktDW75rNlGVsUf/8hzjCC/wkWI/jdTRmBb9aI7erSG82r1bjKY3F6k28WnsVxB1C73A==
   /human-signals/1.1.1:
     dev: true
     engines:
@@ -2103,6 +2151,12 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-glc9y00wgtwcDmp7GaE/0b0OnxpNJsVf3ael/An6Fe2Q51LLwN1er6sdomLRzz5h0+yMpiYLhWYF5R7HeqVd4g==
+  /media-typer/0.3.0:
+    dev: true
+    engines:
+      node: '>= 0.6'
+    resolution:
+      integrity: sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=
   /meow/7.1.1:
     dependencies:
       '@types/minimist': 1.2.0
@@ -2140,6 +2194,20 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-y7FpHSbMUMoyPbYUSzO6PaZ6FyRnQOpHuKwbo1G+Knck95XVU4QAiKdGEnj5wwoS7PlOgthX/09u5iFJ+aYf5Q==
+  /mime-db/1.44.0:
+    dev: true
+    engines:
+      node: '>= 0.6'
+    resolution:
+      integrity: sha512-/NOTfLrsPBVeH7YtFPgsVWveuL+4SjjYxaQ1xtM1KMFj7HdxlBlxeyNLzhyJVx7r4rZGJAZ/6lkKCitSc/Nmpg==
+  /mime-types/2.1.27:
+    dependencies:
+      mime-db: 1.44.0
+    dev: true
+    engines:
+      node: '>= 0.6'
+    resolution:
+      integrity: sha512-JIhqnCasI9yD+SsmkquHBxTSEuZdQX5BuQnS2Vc7puQQQ+8yiP5AY5uWhpdv4YL4VM5c6iliiYWPgJ/nJQLp7w==
   /mimic-fn/2.1.0:
     dev: true
     engines:
@@ -2853,6 +2921,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-mNCnTUF0OYPwYzSHbdRdCfNNHqrne+HS5tS5xNb6yJbdP9wInV0q5xPLE0EyfV/Q3tImo3y/OXpD8Jn0Jtnjrg==
+  /setprototypeof/1.2.0:
+    dev: true
+    resolution:
+      integrity: sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==
   /shebang-command/2.0.0:
     dependencies:
       shebang-regex: 3.0.0
@@ -2952,6 +3024,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
+  /statuses/1.5.0:
+    dev: true
+    engines:
+      node: '>= 0.6'
+    resolution:
+      integrity: sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=
   /string-similarity/4.0.2:
     dev: true
     resolution:
@@ -3138,6 +3216,12 @@ packages:
       node: '>=8.0'
     resolution:
       integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==
+  /toidentifier/1.0.0:
+    dev: true
+    engines:
+      node: '>=0.6'
+    resolution:
+      integrity: sha512-yaOH/Pk/VEhBWWTlhI+qXxDFXlejDGcQipMlyxda9nthulaxLZUNcUqFxokp0vcYnvteJln5FNQDRrxj3YcbVw==
   /trim-newlines/3.0.0:
     dev: true
     engines:
@@ -3234,6 +3318,15 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==
+  /type-is/1.6.18:
+    dependencies:
+      media-typer: 0.3.0
+      mime-types: 2.1.27
+    dev: true
+    engines:
+      node: '>= 0.6'
+    resolution:
+      integrity: sha512-TkRKr9sUTxEH8MdfuCSP7VizJyzRNMjj2J2do2Jr3Kym598JVdEksuzPQCnlFPW4ky9Q+iA+ma9BGm06XQBy8g==
   /typedarray-to-buffer/3.1.5:
     dependencies:
       is-typedarray: 1.0.0
@@ -3314,6 +3407,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==
+  /vary/1.1.2:
+    dev: true
+    engines:
+      node: '>= 0.8'
+    resolution:
+      integrity: sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
   /which-module/2.0.0:
     dev: true
     resolution:
@@ -3475,7 +3574,10 @@ specifiers:
   chai: ^4.2.0
   fastify: ^3.7.0
   fastify-plugin: ^3.0.0
+  fastify-sensible: ^3.0.1
+  fluent-schema: ^1.0.5
   gts: ^3.0.2
+  light-my-request: ^4.2.1
   mocha: ^8.2.1
   nyc: ^15.1.0
   ts-node: ^9.0.0
