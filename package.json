@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gmvbr/template-plugin-ts.git"
+    "url": "git+https://github.com/gmvbr/gmod-auth-login.git"
   },
   "files": [
     "lib/"
@@ -29,9 +29,9 @@
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gmvbr/template-plugin-ts/issues"
+    "url": "https://github.com/gmvbr/gmod-auth-login/issues"
   },
-  "homepage": "https://github.com/gmvbr/template-plugin-ts#readme",
+  "homepage": "https://github.com/gmvbr/gmod-auth-login#readme",
   "devDependencies": {
     "@types/chai": "^4.2.14",
     "@types/mocha": "^8.0.3",
